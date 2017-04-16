@@ -1,0 +1,52 @@
+"Quantidade de Utilizadores Conectados"
+    -> who | wc -l
+    ou
+    -> users | wc -w
+"Temperaturas"
+    > watch -n 1 -d sensors
+CPU
+    "4 Processessos mais Comelhoes"
+        -> ps -eo"%C %G %c" --sort %cpu | tail -n 4 | tac
+
+    "Numero total de Cores" = Numero de Processo * Core(s) por socket
+    -> "Numero de Processo"   
+        cat /proc/cpuinfo | grep processor | wc -l
+        lscpu | grep "CPU(s):"
+
+    -> "Numero de Cores"
+        cat /proc/cpuinfo | grep 'core id'
+        nproc
+
+    -> "para ver o slot e muito mais" 
+        sudo lshw -class processor
+
+    -> "about the cpu, socket type, vendor name, flags"    
+    sudo dmidecode -t 4
+
+    -> "Vender" 
+        cat /proc/cpuinfo | grep vendor | uniq
+
+    -> "Model Name"
+        cat /proc/cpuinfo | grep 'model name' | uniq
+
+    -> "Frequencia CPU"
+        q
+        -> "De cada cpu"
+            cat /proc/cpuinfo | grep -i mhz | uniq
+            -> "Periodica"
+                watch -n 0.1 "cat /proc/cpuinfo | grep -i mhz"
+
+"Resumo do Sistema"
+    -> lshw -short
+"programazito fixolas" -> hardinfo
+                     -> inxi   
+
+https://psyhocode.com/skript-dlya-sistemnogo-administratora-linux/
+http://www.tecmint.com/commands-to-collect-system-and-hardware-information-in-linux/
+lsblk -a
+lsblk
+lsusb
+
+"TOP"
+    sort by cpu
+    -> top -o %CPU
