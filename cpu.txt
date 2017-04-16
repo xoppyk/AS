@@ -50,3 +50,5 @@ lsusb
 "TOP"
     sort by cpu
     -> top -o %CPU
+
+
