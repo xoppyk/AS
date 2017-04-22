@@ -1,6 +1,6 @@
 COMANDOS
 
-Kernel:   uname –r -v
+Kernel:   uname â€“r -v | tr -s " " ":" | cut -s ":" -f1,2 | tr -s ":" " "
 
 Uptime:   uptime | tr -s " " "," | cut -d "," -f 4
 
