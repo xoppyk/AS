@@ -1,0 +1,7 @@
+COMANDOS
+
+Kernel:   uname –r -v
+
+Uptime:   uptime | tr -s " " "," | cut -d "," -f 4
+
+Arquitetura:    arch
