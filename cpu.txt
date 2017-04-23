@@ -36,6 +36,8 @@ CPU
             -> "Periodica"
                 watch -n 0.1 "cat /proc/cpuinfo | grep -i mhz"
 
+"RAM" -> sudo dmidecode -t memory
+
 "Resumo do Sistema"
     -> lshw -short
 "programazito fixolas" -> hardinfo
