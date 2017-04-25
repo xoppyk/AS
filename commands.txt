@@ -1,0 +1,9 @@
+Ficheiros mais comilões 
+ps aux | sort -nr -k 4 | head -3
+ps aux --sort '%mem' | tail -3
+
+Memoria
+free -m 
+top | grep Mem
+vmstat
+cat /proc/meminfo | head -5
