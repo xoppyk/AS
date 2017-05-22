@@ -48,7 +48,7 @@ sudo a2ensite servidorAdminSistemas
 brower-> Endereço IP, placa bridget, maq virtual
 
 
-#BEWMIN
+#WEBMIN
 	https://192.168.87.11:10000/
 	user
 	password
