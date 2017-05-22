@@ -7,13 +7,10 @@ iface eth0 inet static
         address 192.168.87.10
         netmask 255.255.255.0
         gateway 192.168.87.2
-        dns-nameservers 10.10.10.10
+        #dns-nameservers 10.10.10.10
 
-#auto eth1
-#iface eth1 inet dhcp
-
-auto eth2
-iface eth2 inet static
+auto eth1
+iface eth1 inet static
         address 10.10.10.12
         netmask 255.255.255.0
         dns-nameservers 10.10.10.10
@@ -51,4 +48,7 @@ sudo a2ensite servidorAdminSistemas
 brower-> Endereço IP, placa bridget, maq virtual
 
 
-BEWMIN
+#BEWMIN
+	https://192.168.87.11:10000/
+	user
+	password
