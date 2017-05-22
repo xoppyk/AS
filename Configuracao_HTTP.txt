@@ -1,16 +1,34 @@
 #CONFIGURACAO HTTP
 
+#Alterar o ficheiro
+sudo vi /etc/network/interfaces
+auto eth0
+iface eth0 inet static
+        address 192.168.87.10
+        netmask 255.255.255.0
+        gateway 192.168.87.2
+        dns-nameservers 10.10.10.10
+
+#auto eth1
+#iface eth1 inet dhcp
+
+auto eth2
+iface eth2 inet static
+        address 10.10.10.12
+        netmask 255.255.255.0
+        dns-nameservers 10.10.10.10
+
+#Alterar o ficheiro
+sudo vi /etc/resolv.conf
+	nameserver 10.10.10.10
+	search servidor.dns.pt
+
 #Alterar o ficheiro 
 sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/servidorAdminSistemas.conf
 
 	ServerName www.servidoras.pt
 	DocumentRoot /var/www/servidoradminsistemas/
     DirectoryIndex index.html
-
-
-
-
-
 
 #criar a diretoria /var/www/servidoradminsistemas
 	
@@ -30,4 +48,7 @@ sudo a2dissite 000-default.conf
 # ativar o website 
 sudo a2ensite servidorAdminSistemas
 
-brower-> Endereço IP maq virtual
+brower-> Endereço IP, placa bridget, maq virtual
+
+
+BEWMIN
